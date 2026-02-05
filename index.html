@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <h3><i class="fa-solid fa-code"></i> Portfolio</h3>
+  <ul>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#veille">Veille IA</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#contact">CV</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Je suis [Thierry Kenaka]</h1>
+  <p>Futur développeur Web & Passionné d'IA</p>
+  <a href="#projects" class="btn">Voir mes projets</a>
+</header>
+
+<section id="about">
+  <h2>À propos de moi</h2>
+  <p>Futur développeur web créatif en premiere année de bts sio, spécialisé en HTML, CSS et JavaScript.</p>
+</section>
+
+<section id="veille">
+  <h2>Veille Technologique – IA</h2>
+  <div class="cards">
+    <div class="card"><i class="fa-solid fa-brain"></i><p>IA générative</p></div>
+    <div class="card"><i class="fa-solid fa-robot"></i><p>Machine Learning</p></div>
+    <div class="card"><i class="fa-solid fa-globe"></i><p>IA & Web</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projets</h2>
+
+  <div class="card" id="game">
+    <h3>🎮 Mini Jeu</h3>
+    <p>Devine le nombre entre 1 et 10</p>
+    <input type="number" id="guess">
+    <button class="btn" onclick="checkGuess()">Tester</button>
+    <p id="result"></p>
+ <div class="card">
+  <h3>🐦 Flappy Bird</h3>
+  <canvas id="flappy" width="320" height="480"></canvas>
+  <p id="flappyScore">Score : 0</p>
+</div>
+
+  </div>
+
+  <div class="calculator">
+    <input type="text" id="calc" disabled>
+    <div class="buttons">
+      <button onclick="add('7')">7</button>
+      <button onclick="add('8')">8</button>
+      <button onclick="add('9')">9</button>
+      <button onclick="add('/')">/</button>
+      <button onclick="add('4')">4</button>
+      <button onclick="add('5')">5</button>
+      <button onclick="add('6')">6</button>
+      <button onclick="add('*')">*</button>
+      <button onclick="add('1')">1</button>
+      <button onclick="add('2')">2</button>
+      <button onclick="add('3')">3</button>
+      <button onclick="add('-')">-</button>
+      <button onclick="add('0')">0</button>
+      <button onclick="clearCalc()">C</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="add('+')">+</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Mon CV</h2>
+  <a href="cv.pdf" class="btn" download>Télécharger mon CV</a>
+</section>
+
+<footer>
+  <p>© 2026 – Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
